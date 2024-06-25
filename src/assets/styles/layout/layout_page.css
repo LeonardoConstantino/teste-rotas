@@ -1,0 +1,79 @@
+body {
+  min-height: 100vh;
+  margin: 0px auto;
+  margin-bottom: 0px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2rem 6rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.page header {
+  background: var(--background-alt);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: none;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-wrap: balance;
+}
+
+.page header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.page main {
+  padding: 2rem;
+}
+
+.page section {
+  background: var(--selection);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0.5rem 0.5rem 1rem var(--code);
+  text-wrap: balance;
+}
+
+.page section h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+.page footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+.page footer button {
+  padding: 1rem 2rem;
+  transition: background box-shadow 0.6s ease;
+}
+
+.page footer button:hover {
+  background: var(--focus);
+  box-shadow: 0 2rem 6rem -0.5rem var(--code);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page section {
+    box-shadow: 0.5rem 0.5rem 1rem var(--border);
+  }
+
+  .page footer button:hover {
+    box-shadow: 0 2rem 6rem -0.5rem var(--border);
+  }
+}

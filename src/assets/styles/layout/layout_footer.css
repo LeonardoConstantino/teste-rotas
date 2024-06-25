@@ -1,0 +1,24 @@
+/* Rodapé*/
+footer {
+  background-color: var(--background);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer p span {
+  margin-right: 1rem;
+}
+
+footer p span:first-child {
+  margin-right: 0;
+}
+
+footer i.copy {
+  transform: scale(0.6) translate(0.5rem, 1rem);
+}
