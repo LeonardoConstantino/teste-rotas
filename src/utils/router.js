@@ -1,7 +1,7 @@
 import { HOMEPATH } from './constantes.js';
 import { aboutPage } from '../pages/about'
 import { contactPage } from '../pages/contact'
-import { HomePage } from '../pages/home'
+import { homePage } from '../pages/home'
 import { notFoundPage } from '../pages/notFound'
 import { renderElement } from './renderElement'
 
@@ -19,7 +19,7 @@ import { renderElement } from './renderElement'
  */
 const routes = [
   // { path: '/teste-rotas/', view: HomePage },
-  { path: HOMEPATH + '/', view: HomePage },
+  { path: HOMEPATH + '/', view: homePage },
   { path: HOMEPATH + '/Ferramentas', view: aboutPage },
   { path: HOMEPATH + '/SEO', view: contactPage },
   { path: HOMEPATH + '/404', view: notFoundPage },

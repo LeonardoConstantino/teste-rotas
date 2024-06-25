@@ -42,4 +42,4 @@ const loadHomePage = () => {
   return home
 }
 
-export const HomePage = loadHomePage()
+export const homePage = loadHomePage()
