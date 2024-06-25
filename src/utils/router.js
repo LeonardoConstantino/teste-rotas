@@ -17,8 +17,8 @@ import { renderElement } from './renderElement'
  * @type {Route[]}
  */
 const routes = [
-  { path: '/teste-rotas/', view: HomePage },
-  { path: '/', view: HomePage },
+  // { path: '/teste-rotas/', view: HomePage },
+  { path: '/'|| '/teste-rotas/', view: HomePage },
   { path: '/Ferramentas', view: aboutPage },
   { path: '/SEO', view: contactPage },
   { path: '/404', view: notFoundPage },

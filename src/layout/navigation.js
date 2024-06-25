@@ -19,6 +19,7 @@ import { navigateTo, paths } from '../utils/router'
  * @returns {string[]} Os caminhos das rotas filtrados.
  */
 const hrefList = paths.filter((i) => i !== '/404')
+console.log('hrefList :', hrefList);
 
 /**
  * Manipulador de evento para navegação programática.
@@ -49,7 +50,7 @@ export const createNavigation = () => {
     const a = getComponent(
       'a',
       getTextComponent(
-        `${href === '/' || 'teste-rotas/' ? 'Introdução' : capitalizeFirstLetter(href.slice(1))}`
+        `${href === location.pathname ? 'Introdução' : capitalizeFirstLetter(href.slice(1))}`
       )
     )
     a.props['data-link'] = ''
