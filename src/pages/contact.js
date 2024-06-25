@@ -30,7 +30,7 @@ const main = getComponent('main', section1, section2, section3, section4)
 const footerAction = createButton(
   'Volte para: Introdução às Rotas de Navegação Web',
   () => {
-    navigateTo(location.origin + HOMEPATH)
+    navigateTo(location.origin + HOMEPATH + '/')
   }
 )
 

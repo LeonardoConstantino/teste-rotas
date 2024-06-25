@@ -1,4 +1,4 @@
-import { HOMEPATH } from '../utils/constantes.js';
+import { HOMEPATH } from '../utils/constantes.js'
 import {
   capitalizeFirstLetter,
   getComponent,
@@ -20,7 +20,7 @@ import { navigateTo, paths } from '../utils/router.js'
  * @returns {string[]} Os caminhos das rotas filtrados.
  */
 const hrefList = paths.filter((i) => i !== HOMEPATH + '/404')
-console.log('paths :', paths);
+console.log('paths :', paths)
 
 /**
  * Manipulador de evento para navegação programática.
@@ -51,7 +51,11 @@ export const createNavigation = () => {
     const a = getComponent(
       'a',
       getTextComponent(
-        `${href === HOMEPATH ? 'Introdução' : capitalizeFirstLetter(href.replace(HOMEPATH + '/', ''))}`
+        `${
+          href === HOMEPATH + '/'
+            ? 'Introdução'
+            : capitalizeFirstLetter(href.replace(HOMEPATH + '/', ''))
+        }`
       )
     )
 

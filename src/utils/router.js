@@ -19,7 +19,7 @@ import { renderElement } from './renderElement'
  */
 const routes = [
   // { path: '/teste-rotas/', view: HomePage },
-  { path: HOMEPATH, view: HomePage },
+  { path: HOMEPATH + '/', view: HomePage },
   { path: HOMEPATH + '/Ferramentas', view: aboutPage },
   { path: HOMEPATH + '/SEO', view: contactPage },
   { path: HOMEPATH + '/404', view: notFoundPage },

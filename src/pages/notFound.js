@@ -15,7 +15,7 @@ const loadNotFound = () => {
 
   // Cria o componente de link com o texto "Voltar para a Página Inicial"
   const a = getComponent('a', getTextComponent('Voltar para a Página Inicial'))
-  a.props['href'] = HOMEPATH // Define o atributo href para redirecionar à página inicial
+  a.props['href'] = HOMEPATH + '/' // Define o atributo href para redirecionar à página inicial
 
   // Monta o componente completo da página "Não Encontrado"
   const notFound = getComponent('div', h1, p, a)
