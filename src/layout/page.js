@@ -9,7 +9,7 @@ import { getComponent } from '../utils/helpers'
 const getPage = (...childres) => {
   // Cria o componente de página com os componentes filhos fornecidos
   const page = getComponent('div', ...childres)
-  page.props['class'] = 'page' // Define a classe CSS para estilização
+  page.props['class'] = 'pages' // Define a classe CSS para estilização
   page.props['data-page'] = '' // Define o atributo data-page
 
   return page

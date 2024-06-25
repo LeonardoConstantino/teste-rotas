@@ -36,7 +36,7 @@ const footer = getComponent('footer', footerAction)
 const loadAbout = () => {
   const about = getComponent('div', header, main, footer)
 
-  about.props['class'] = 'about'
+  about.props['class'] = 'about page'
 
   return about
 }

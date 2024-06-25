@@ -38,7 +38,7 @@ const footer = getComponent('footer', footerAction)
 const loadContactPage = () => {
   const contact = getComponent('div', header, main, footer)
 
-  contact.props['class'] = 'contact'
+  contact.props['class'] = 'contact page'
 
   return contact
 }

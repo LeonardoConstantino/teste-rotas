@@ -36,7 +36,7 @@ const footer = getComponent('footer', footerAction)
 const loadHomePage = () => {
   const home = getComponent('div', header, main, footer)
 
-  home.props['class'] = 'home'
+  home.props['class'] = 'home page'
 
   return home
 }
