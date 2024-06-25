@@ -17,6 +17,7 @@ import { renderElement } from './renderElement'
  * @type {Route[]}
  */
 const routes = [
+  { path: '/teste-rotas/', view: HomePage },
   { path: '/', view: HomePage },
   { path: '/Ferramentas', view: aboutPage },
   { path: '/SEO', view: contactPage },

@@ -18,7 +18,7 @@ const loadNotFound = () => {
 
   // Monta o componente completo da página "Não Encontrado"
   const notFound = getComponent('div', h1, p, a)
-  notFound.props['class'] = 'not-found page' // Define a classe CSS para estilização
+  notFound.props['class'] = 'not-found' // Define a classe CSS para estilização
 
   return notFound
 }
