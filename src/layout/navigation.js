@@ -1,9 +1,10 @@
+import { HOMEPATH } from '../utils/constantes.js';
 import {
   capitalizeFirstLetter,
   getComponent,
   getTextComponent,
-} from '../utils/helpers'
-import { navigateTo, paths } from '../utils/router'
+} from '../utils/helpers.js'
+import { navigateTo, paths } from '../utils/router.js'
 
 /**
  * Cria um componente de navegação contendo links para as rotas definidas.
@@ -18,8 +19,8 @@ import { navigateTo, paths } from '../utils/router'
  *
  * @returns {string[]} Os caminhos das rotas filtrados.
  */
-const hrefList = paths.filter((i) => i !== '/404')
-console.log('hrefList :', hrefList);
+const hrefList = paths.filter((i) => i !== HOMEPATH + '/404')
+console.log('paths :', paths);
 
 /**
  * Manipulador de evento para navegação programática.
@@ -50,17 +51,20 @@ export const createNavigation = () => {
     const a = getComponent(
       'a',
       getTextComponent(
-        `${href === location.pathname ? 'Introdução' : capitalizeFirstLetter(href.slice(1))}`
+        `${href === HOMEPATH ? 'Introdução' : capitalizeFirstLetter(href.replace(HOMEPATH + '/', ''))}`
       )
     )
+
     a.props['data-link'] = ''
     a.props['href'] = href
     a.props['onClick'] = (e) => {
       setRouter(e)
     }
+
     if (href === location.pathname) {
       a.props['class'] = 'display-none'
     }
+
     return a
   })
 

@@ -1,4 +1,5 @@
 import { getComponent, getTextComponent } from '../utils/helpers'
+import { HOMEPATH } from './../utils/constantes';
 
 /**
  * Carrega a página de "Não Encontrado" (404) montando os componentes de cabeçalho, parágrafo e link.
@@ -14,7 +15,7 @@ const loadNotFound = () => {
 
   // Cria o componente de link com o texto "Voltar para a Página Inicial"
   const a = getComponent('a', getTextComponent('Voltar para a Página Inicial'))
-  a.props['href'] = '/' // Define o atributo href para redirecionar à página inicial
+  a.props['href'] = HOMEPATH // Define o atributo href para redirecionar à página inicial
 
   // Monta o componente completo da página "Não Encontrado"
   const notFound = getComponent('div', h1, p, a)

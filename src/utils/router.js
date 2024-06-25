@@ -1,3 +1,4 @@
+import { HOMEPATH } from './constantes.js';
 import { aboutPage } from '../pages/about'
 import { contactPage } from '../pages/contact'
 import { HomePage } from '../pages/home'
@@ -18,10 +19,10 @@ import { renderElement } from './renderElement'
  */
 const routes = [
   // { path: '/teste-rotas/', view: HomePage },
-  { path: '/'|| '/teste-rotas/', view: HomePage },
-  { path: '/Ferramentas', view: aboutPage },
-  { path: '/SEO', view: contactPage },
-  { path: '/404', view: notFoundPage },
+  { path: HOMEPATH, view: HomePage },
+  { path: HOMEPATH + '/Ferramentas', view: aboutPage },
+  { path: HOMEPATH + '/SEO', view: contactPage },
+  { path: HOMEPATH + '/404', view: notFoundPage },
 ]
 
 /**
@@ -41,7 +42,7 @@ const pathToRegex = (path) => new RegExp(`^${path.replace(/\//g, '\\/')}$`)
 const matchRoute = (currentPath) => {
   return (
     routes.find((route) => pathToRegex(route.path).test(currentPath)) ||
-    routes.find((route) => route.path === '/404')
+    routes.find((route) => route.path === HOMEPATH + '/404')
   )
 }
 

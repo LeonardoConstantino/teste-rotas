@@ -37,6 +37,8 @@ const icone = {
     style: `background-image: url("${copy}")`, // Define o estilo com a imagem de cópia
   },
 }
+const warning = getComponent('small', getTextComponent('O conteudo de texto da pagina é ilustrativo, feito por IA'))
+warning.props['title'] = 'The text content of the page is illustrative, made by AI'
 
 /**
  * Cria o rodapé da página com o ícone, ano atual e nome do autor.
@@ -52,7 +54,8 @@ const createFooter = () => {
       getComponent('span', icone),
       getComponent('span', currentYear),
       getComponent('span', autor)
-    )
+    ),
+    warning
   )
 }
 

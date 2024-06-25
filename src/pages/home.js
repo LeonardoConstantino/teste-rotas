@@ -1,6 +1,7 @@
 import { getComponent, getHeader, getSection } from '../utils/helpers'
 import { navigateTo } from '../utils/router'
 import { createButton } from './../components/button'
+import { HOMEPATH } from './../utils/constantes';
 
 const header = getHeader(
   'Rotas de Navegação Web',
@@ -19,7 +20,7 @@ const section2 = getSection(
 
 const section3 = getSection(
   'Tipos de Rotas de Navegação',
-  'A instalação do Drawall é rápida e prática, acelerando o progresso da obra. Com menos tempo gasto em cada etapa, seus projetos são concluídos mais rápido, permitindo iniciar novos empreendimentos com maior frequência.'
+  'Existem vários tipos de rotas de navegação que podem ser implementadas em um site, incluindo rotas hierárquicas, lineares e em rede. Rotas hierárquicas organizam o conteúdo em uma estrutura de árvore, com páginas principais e subpáginas. As rotas lineares seguem uma sequência específica, enquanto as rotas em rede permitem múltiplos caminhos entre diferentes páginas.'
 )
 
 const main = getComponent('main', section1, section2, section3)
@@ -27,7 +28,7 @@ const main = getComponent('main', section1, section2, section3)
 const footerAction = createButton(
   'Veja sobre: Ferramentas para Mapear Rotas',
   () => {
-    navigateTo(location.origin + '/Ferramentas')
+    navigateTo(location.origin + HOMEPATH + '/Ferramentas')
   }
 )
 

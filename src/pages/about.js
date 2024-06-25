@@ -1,6 +1,7 @@
 import { getComponent, getHeader, getSection } from '../utils/helpers'
 import { navigateTo } from '../utils/router'
 import { createButton } from './../components/button'
+import { HOMEPATH } from './../utils/constantes';
 
 const header = getHeader(
   'Rotas de Navegação Web',
@@ -27,7 +28,7 @@ const main = getComponent('main', section1, section2, section3)
 const footerAction = createButton(
   'Veja sobre: SEO e Rotas de Navegação',
   () => {
-    navigateTo(location.origin + '/SEO')
+    navigateTo(location.origin + HOMEPATH + '/SEO')
   }
 )
 
