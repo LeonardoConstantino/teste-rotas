@@ -63,6 +63,11 @@ export const createNavigation = () => {
     return a
   })
 
+  // const doc = getComponent('a', getTextComponent('Doc'))
+  // doc.props['href'] = 'https://raw.githubusercontent.com/LeonardoConstantino/teste-rotas/main/out/index.html'
+  // doc.props['target'] = '_blank'
+
+  // const nav = getComponent('nav', ...anchors, doc)
   const nav = getComponent('nav', ...anchors)
 
   return nav
