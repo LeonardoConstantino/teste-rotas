@@ -49,7 +49,7 @@ export const createNavigation = () => {
     const a = getComponent(
       'a',
       getTextComponent(
-        `${href === '/teste-rotas/' ? 'Introdução' : capitalizeFirstLetter(href.slice(1))}`
+        `${href === '/' && '/teste-rotas/' ? 'Introdução' : capitalizeFirstLetter(href.slice(1))}`
       )
     )
     a.props['data-link'] = ''
