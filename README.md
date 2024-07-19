@@ -46,7 +46,7 @@ Após a instalação, siga os passos abaixo para rodar o projeto:
     npm run preview
     ```
 
-3. Acesse o aplicativo no navegador e preencha o formulário para calcular o preço do papel higiênico.
+3. Acesse o aplicativo no navegador.
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/LeonardoConstantino/teste-rotas/blob/main/LICENSE.txt) para mais detalhes.
